@@ -1,11 +1,5 @@
 public class AreaCalculator {
-
-    public static void main(String[] args) {
-        var a = area(0);
-        var b = area(0,0);
-        int end;
-    }
-
+    
     public static double area(double radius) {
         if (radius < 0)
             return -1.0;

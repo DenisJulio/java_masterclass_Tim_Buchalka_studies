@@ -1,7 +1,7 @@
 public class MinutesToYearsDaysCalculator {
 
     public static void main(String[] args) {
-        printYearsAndDays(218123456301L);
+        printYearsAndDays(525600);
     }
 
     public static void printYearsAndDays(long minutes) {
@@ -9,10 +9,10 @@ public class MinutesToYearsDaysCalculator {
             System.out.println("Invalid Value");
             return;
         }
-        long hours = minutes / 60;
-        long days = hours / 24;
-        long years = days / 365;
-        System.out.println(String.format("%s min = %s y and %s d", ((hours % 24) * 60) + (minutes % 60), years, days));
+        long totalDays = minutes / 1440;
+        int years = (int) (totalDays / 365);
+        long days = totalDays % 365;
+        System.out.println(String.format("%s min = %s y and %s d", minutes, years, days));
     }
 
 }
